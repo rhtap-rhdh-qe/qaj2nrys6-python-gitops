@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qaj2nrys6-python-gitops
+  description: This is GitOps manifest for qaj2nrys6-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=qaj2nrys6-python
+    backstage.io/kubernetes-id: qaj2nrys6-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: qaj2nrys6-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qaj2nrys6-python
